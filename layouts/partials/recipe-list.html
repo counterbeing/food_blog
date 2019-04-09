@@ -1,0 +1,9 @@
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ range $pages }}
+  <div>
+    <a href="{{.URL}}">
+    <h2>{{.Title}}</h2>
+    {{.Content}}
+    </a>
+  </div>
+{{ end }}
